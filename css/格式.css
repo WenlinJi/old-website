@@ -1,0 +1,65 @@
+*{padding: 0;
+margin: 0;}
+body{
+      background-image: url(总/背景1.jpg);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+	}
+	
+	#top{
+		margin-top: 0;
+		font-size: 25px;
+		font-weight: bold;
+		font-family: "幼圆";
+		 font-style: oblique;
+		margin-left: 0;
+		text-align: center;
+		color: cadetblue;
+		margin-right: 0;
+
+		height: 68px;
+	}
+	#box{
+		margin-top: 0;
+		font-size: 24px;
+		font-weight: bold;
+	    font-family: "幼圆";
+		margin-left: 0;
+		text-align: center;
+		color: cadetblue;
+		margin-right: 0;
+		background-color:rgba(176,190,222,0.1);
+		height: 90px;
+		
+			}
+	table{
+		width: 100%;
+	    height: 100px;
+		}
+	
+	#bottom{
+		margin-top: 70%;
+		margin-bottom: 0;
+		font-size: 18px;
+		font-weight: bold;
+		font-family: "幼圆";
+		font-style: oblique;
+		margin-left: 0;
+		margin-right: 0;
+		text-align: center;
+		color: cadetblue;
+		line-height: 60px;
+		background-color:rgba(176,190,222,0.1);
+		height: 130px;
+		
+	}
+	
+	a{text-decoration-line: none;}
+	a:link{color: steelblue ;}
+	a:visited{color: cadetblue;}
+	a:hover{
+		color:orange;
+	    text-decoration: overline;
+		}
+	a:active{color: steelblue;}

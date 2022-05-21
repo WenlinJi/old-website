@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>行星游</title>
+		<link rel="stylesheet" type="text/css" href="css/格式.css"/>
+		<style type="text/css">
+			#bottom{
+				margin-top: 220px;
+			}
+			*{padding: 0;
+			margin: 0;}
+		    body {
+		    background-image: url(总/背景3.jpg);
+		    background-repeat: no-repeat;
+		    background-attachment: fixed;
+		    background-size: cover;}
+			table{width: 100%;
+			height: 100px;}
+			#xing{
+				margin-top: 100px;
+				display: inline-block;
+				float: center;
+				margin-left: 9%;
+				margin-right: 4%;
+			}
+			#xing a{
+				font-family: "幼圆";
+				font-weight: bold;
+				font-size: 35px;
+				color:powderblue;
+				text-decoration-line: none;
+				text-align: center;
+			}
+			#xing a:hover{
+				color: lightskyblue;
+			}
+		#tu{
+			width: 600px;
+			margin-top: 80px;
+			margin-left: 160px;
+			text-align: right;
+			font-size: 21px;
+			line-height: 1.5;
+			background-color: rgba(224,255,255,0.1);
+			font-family: "幼圆";
+			color: slategrey;
+		
+		}
+		#hua{
+			margin-bottom: 30px;
+			margin-top: 46%;
+			text-align: right;
+			height: 100px;
+			font-size: 18px;
+			font-family: "幼圆";
+			font-style: oblique;
+			color: cadetblue;
+		}
+
+
+.box {
+	width: 320px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0 ;
+	right: 0;
+	margin: auto;
+	margin-top: 560px;
+	margin-bottom: 400px;
+	transform-style: preserve-3d;
+	animation: im 20s linear infinite;
+}
+
+.box img {
+	width: 96%;
+	height: 100%;
+	position: absolute;
+}
+
+@keyframes im{
+	0% {
+		transform: rotateY(0deg) rotateX(10deg);
+	}
+
+	25% {
+		transform: rotateY(90deg) rotateX(-10deg);
+	}
+
+	50% {
+		transform: rotateY(180deg) rotateX(10deg);
+	}
+
+	75% {
+		transform: rotateY(270deg) rotateX(-10deg);
+	}
+
+	100% {
+		transform: rotateY(360deg) rotateX(10deg);
+	}
+
+}
+
+/*10张图片3d变换*/
+.box img:nth-child(1) {
+	transform: rotateY(0deg) translateZ(600px);
+	backface-visibility: visible;
+}
+
+.box img:nth-child(2) {
+	transform: rotateY(36deg) translateZ(600px);
+	backface-visibility: visible;
+}
+
+.box img:nth-child(3) {
+	transform: rotateY(72deg) translateZ(600px);
+	backface-visibility: visible;
+}
+
+.box img:nth-child(4) {
+	transform: rotateY(108deg) translateZ(600px);
+	backface-visibility: visible;
+}
+
+.box img:nth-child(5) {
+	transform: rotateY(144deg) translateZ(600px);
+	backface-visibility: visible;
+}
+
+.box img:nth-child(6) {
+	transform: rotateY(180deg) translateZ(600px);
+	backface-visibility: visible;
+}
+.box img:nth-child(7) {
+	transform: rotateY(216deg) translateZ(600px);
+	backface-visibility: visible;
+}
+.box img:nth-child(8) {
+	transform: rotateY(252deg) translateZ(600px);
+	backface-visibility: visible;
+}
+.box img:nth-child(9) {
+	transform: rotateY(288deg) translateZ(600px);
+	backface-visibility: visible;
+}
+.box img:nth-child(10) {
+	transform: rotateY(324deg) translateZ(600px);
+	backface-visibility: visible;
+}
+	</style>
+	</head>
+	<body>
+		<div id="top">
+			<a href="关于我.html" ><img src="总/叶子2.png" >&nbsp玊尔&nbsp <img src="总/叶子3.png" ></a>
+		</div>
+		<div id="box">
+			<table border="0" cellspacing="" cellpadding="">
+				<tr>
+					<th><a href="插画.html">插画本</a></th>
+					<th><a href="电影.html">电影录</a></th>
+					<th><a href="index.html"><img src="行星/折纸鸟6.png" ></a></th>
+					<th><a href="日贴.html">日贴记</a></th>
+					<th><a href="美食.html">美食站</a></th>
+				</tr>
+			</table>
+			</div>
+			<img src="行星/飞船.png" >
+	<div id="xing">
+				&nbsp &nbsp &nbsp <a href="https://www.hightopo.com/demo/solar-system/" style="background-color: rgba(245,255,250,0.2);">这里有宇宙，快戳我</a>
+				<br>
+				&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <img src="行星/手1.png" >
+	</div>
+	<img src="行星/月球.png" >
+	<div id="hua">
+		<p>大自然的秩序，证明了宇宙确有它的建筑家。——〔德〕康德 《康德文集》</p>
+		<br>
+		<p>宇宙是在运行的。它有它的生命。——〔法〕罗曼.罗兰 《母与子》</p>
+		<br>
+		<p>我喜欢这无时无刻不在变化着的宇宙万象，我喜欢它的神秘莫测，其中蕴藏着规律，夹杂着偶然，自成一体。</p>
+		<br>
+	</div>
+	
+    <div style="background-color: rgba(70,130,180,0.1);
+	height: 100px;
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 100px;
+	color: lightblue;">
+    <img src="总/蓝.png" >  行星语录
+    </div>
+    
+	
+	<div style="
+	margin-right: 10px;
+	margin-top:150px;	
+	display: inline-block;
+	float: right;
+	background-color: rgba(224,255,255,0.1)">
+	<img src="行星/星球.png" >
+	</div>
+
+				<div class="show">
+				<div class="box">
+		
+							<img src="行星/41.jpg" >
+							<img src="行星/42.png" >
+							<img src="行星/43.png" >
+							<img src="行星/44.jpg" >
+							<img src="行星/45.png" >
+							<img src="行星/46.png" >
+							<img src="行星/47.png" >
+							<img src="行星/40.png" >
+							<img src="行星/23.png" >
+							<img src="行星/28.png" >
+						
+				</div>
+				</div>
+				
+				<div id="tu">
+					<p style="font-style: oblique;">
+				Every atom in your body came from a star that
+				exploded. And, the atoms in your left hand probably
+				came from a different star than your right hand. It really
+				is the most poetic thing I know about physics: You are all
+				stardust. You couldn' t be here if stars hadn' t exploded,
+				because the elements - the carbon, nitrogen, oxygen,
+				iron, all the things that matter for evolution and for life -
+				weren' t created at the beginning of time. They were
+				created in the nuclear furnaces of stars, and the only way
+				for them to get into your body is if those stars were kind
+				enough to explode. So, forget Jesus. The stars died so
+				that you could be here today.
+				</p>
+				<br>
+				<br>
+				<br>
+				<p >
+				“你身体里的每一个原子都来自一颗爆炸了的恒星，你
+				左手的原子与右手的原子也许来自不同的恒星。这实在是我
+				所知道的物理学中最富诗意的东西:你的一切都是星尘”
+				</p>
+				<br>
+				<p>----我最喜欢的一段关于行星的话</p>
+				</div>
+				
+				
+				 
+				<div id="bottom">
+					Meet you like the wind.
+					<br>
+					遇见你，温澜如风
+				</div>
+
+	</body>
+</html>

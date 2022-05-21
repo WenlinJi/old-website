@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>电影录</title>
+		<link rel="stylesheet" type="text/css" href="css/格式.css"/>	
+		<style type="text/css">
+			#bottom{
+				margin-top: 100px;
+			}
+			body{
+				background-image: url(总/背景2.jpg);
+			}
+			p{
+				font-family: "幼圆";
+				font-size: 18px;
+				line-height: 1.5;
+				font-weight: 300;
+				color: cadetblue;
+				font-style: oblique;
+			}
+			#hai{
+				width:780px;
+				margin-top: 80px;
+				margin-left: 360px;
+				text-align: right;
+				font-size: 20px;
+				line-height: 1.5;
+				background-color: rgba(224,255,255,0.1);
+				font-family: "幼圆";
+				color: slategrey;
+			}
+			#qian{
+				width: 820px;
+				margin-top: 80px;
+				margin-left: 100px;
+				text-align: left;
+				font-size: 20px;
+				line-height: 1.5;
+				background-color: rgba(224,255,255,0.1);
+				font-family: "幼圆";
+				color: slategrey;
+			}
+			#li{
+				width: 760px;
+				margin-top: 80px;
+				margin-left: 350px;
+				text-align: right;
+				font-size: 20px;
+				line-height: 1.5;
+				background-color: rgba(224,255,255,0.1);
+				font-family: "幼圆";
+				color: slategrey;
+			}
+			#ha{
+				width: 760px;
+				margin-top: 80px;
+				margin-left: 100px;
+				text-align: left;
+				font-size: 20px;
+				line-height: 1.5;
+				background-color: rgba(224,255,255,0.1);
+				font-family: "幼圆";
+				color: slategrey;
+			}
+			#xiao{
+				width: 740px;
+				margin-top: 80px;
+				margin-left: 360px;
+				text-align: right;
+				font-size: 20px;
+				line-height: 1.5;
+				background-color: rgba(224,255,255,0.1);
+				font-family: "幼圆";
+				color: slategrey;
+			}
+			
+			*, *:before, *:after {
+				  box-sizing: border-box;
+				}
+			
+				.content {
+				  display: flex;
+				  margin-top: 45px;
+				  margin-left: 10%;
+				  margin-right: 10%;
+				  justify-content: center;
+				  align-items: center;
+				  flex-wrap: wrap;
+				  max-width: 1000px;
+				}
+				
+				.card {
+				  color: inherit;
+				  cursor: pointer;
+				  width: calc(33% - 2rem);
+				  min-width: calc(33% - 2rem);
+				  height: 400px;
+				  min-height: 400px;
+				  perspective: 1000px;
+				  margin: 1rem;
+				  position: relative;
+				}
+				@media screen and (max-width: 800px) {
+				  .card {
+				    width: calc(50% - 2rem);
+				  }
+				}
+				@media screen and (max-width: 500px) {
+				  .card {
+				    width: 100%;
+				  }
+				}
+				
+				.front,.back {
+				  display: flex;
+				  border-radius: 6px;
+				  background-position: center;
+				  background-size: cover;
+				  text-align: center;
+				  justify-content: center;
+				  align-items: center;
+				  position: absolute;
+				  height: 100%;
+				  width: 100%;
+				  -webkit-backface-visibility: hidden;
+				  backface-visibility: hidden;
+				  transform-style: preserve-3d;
+				  transition: ease-in-out 600ms;
+				}
+				
+				.front {
+				  background-size: cover;
+				  padding: 2rem;
+				  font-size: 1.618rem;
+				  font-weight: 600;
+				  color: #fff;
+				  overflow: hidden;
+				}
+		
+				.card:hover .front {
+				  transform: rotateY(180deg);
+				}
+				.card:nth-child(even):hover .front {
+				  transform: rotateY(-180deg);
+				}
+				
+				.back {
+				  background: #fff;
+				  transform: rotateY(-180deg);
+				  padding: 0 2em;
+				}
+				.card:hover .back {
+				  transform: rotateY(0deg);
+				}
+				.card:nth-child(even) .back {
+				  transform: rotateY(180deg);
+				}
+				.card:nth-child(even):hover .back {
+				  transform: rotateY(0deg);
+				}
+
+		
+		</style>
+	</head>
+	<body>
+		<div id="top">
+				<a href="关于我.html" ><img src="总/叶子2.png" >&nbsp玊尔&nbsp <img src="总/叶子3.png" ></a>
+			</div>
+			<div id="box">
+				<table border="0" cellspacing="" cellpadding="">
+					<tr>
+						<th><a href="插画.html">插画本</a></th>
+						<th><a href="行星.html">行星游</a></th>
+						<th><a href="index.html"><img src="电影/鸟.png" ></a></th>
+						<th><a href="日贴.html">日贴记</a></th>
+						<th><a href="美食.html">美食站</a></th>
+					</tr>
+				</table>
+		</div>
+		
+	<div style="text-align: center;
+	margin-top: 80px;
+	background-color: rgba(250,250,250,0.5);">
+		<img src="电影/女孩.png" >
+	</div>
+		
+		<div class="content">
+			<a class="card" >
+		    <div class="front" style="background-image: url(电影/海蒂和爷爷.png);">
+		      <p style="color: white;
+				font-size: 30px;
+				font-weight: bold;
+				font-style: oblique;">Heidi</p>
+		    </div>
+		    <div class="back">
+		      <div>
+		        <p>“他们知道的太少，而你，则见过很多东西，如果做某件事能让你开心，那么尽管去做。不管别人说什么。”</p>
+				<br>
+		        <p style="font-size: 21px;
+				line-height: 1.5;
+				font-weight: 300;
+			">夕阳总会落在你身上，你也会快乐一场。</p>
+		      </div>
+		    </div>
+			</a>
+			<a class="card" >
+		    <div class="front" style="background-image: url(电影/千与千寻.webp);">
+		     <p style="color: white;
+				font-size: 30px;
+				font-weight: bold;
+				font-style: oblique;">Spirited Away</p>
+		    </div>
+		    <div class="back">
+		      <div>
+		        <p>“人生就是一列开往坟墓的列车，路途上会有很多站，很难有人可以自始至终陪着走完。当陪你的人要下车时，即使不舍也该心存感激，然后挥手道别。”</p>
+				<br>
+		        <p style="font-size: 21px;
+				line-height: 1.5;
+				font-weight: 300;
+				font-family: "Nunito Sans", sans-serif;">风再大，也不可能吹走太阳。</p>
+		      </div>
+		    </div>
+			</a>
+			<a class="card" >
+		    <div class="front" style="background-image: url(电影/这个杀手不太冷.webp);">
+		      <p style="color: white;
+				font-size: 30px;
+				font-weight: bold;
+				font-style: oblique;">Léon</p>
+		    </div>
+		    <div class="back">
+		      <div>
+		        <p >“生活是否永远艰辛，还是仅仅童年才如此？”--“总是如此。”</p>
+				<br>
+		        <p style="font-size: 21px;
+				line-height: 1.5;
+				font-weight: 300;
+				font-family: "Nunito Sans";">就在一次次日升月落里，再爱一次人间。</p>
+		      </div>
+			  </div>
+		    </a>
+			
+			<a class="card" >
+			<div class="front" style="background-image: url(电影/哈尔的移动城堡.webp);">
+			  <p style="color: white;
+				font-size: 30px;
+				font-weight: bold;
+				font-style: oblique;">Howl's Moving Castle</p>
+			</div>
+			<div class="back">
+			  <div>
+			    <p>“人生中遇到的磨难很多，我们愈是成熟，也愈是胆小，反倒在绝境中才激发出内存的潜质，从而变的坚强和勇敢。”</p>
+				<br>
+			    <p style="font-size: 21px;
+				line-height: 1.5;
+				font-weight: 300;"></p>
+			  </div>
+			  </div>
+			</a>
+			
+			<a class="card" >
+			<div class="front" style="background-image: url(电影/肖申克的救赎.jpg);">
+			  <p style="color: white;
+				font-size: 30px;
+				font-weight: bold;
+				font-style: oblique;">The Shawshank Redemption</p>
+			</div>
+			<div class="back">
+			  <div>
+			    <p>“生命可以归结为一种简单的选择：要么忙于生存，要么赶着去死。”</p>
+				<br>
+			    <p style="font-size: 21px;
+				line-height: 1.5;
+				font-weight: 300;"></p>
+			  </div>
+			  </div>
+			</a>
+			</div>
+		<div style="text-align: center;">
+			<img src="电影/双手捧.png" >
+		</div>
+		
+		<div style="height: 110px;
+		font-size: 30px;
+		background-color: rgba(255,228,181,0.2);
+		margin-top: 26px;
+		margin-bottom: 70px;
+		text-align: center;
+		line-height: 110px;
+		color: orange">
+		<img src="总/橙.png" >电影&日贴
+		</div>
+		<div id="hai">
+			<div style="display: inline-block;
+				float: left;">
+				<img src="电影/5.png" >
+			</div> 
+			看完这部片子，对比我们所看到的现实，更觉得美好得不切实际。可不嘛，人家本来就是童话改编的。
+			但它最可爱的地方在于，哪怕你明知道是童话，却依然相信这样的事情真的会存在。
+			因为故事里的人，都那么真实可爱，那如阳光般温暖的笑容，我愿意精心收藏。
+		</div>
+		<br>
+		<div id="qian">
+			<div style="display: inline-block;
+				float: right;">
+				<img src="电影/2.png" >
+			</div> 
+			我们也踏入了汤屋，我们整天拿着别人的话语复读，却很难遇到一个千寻这样善良的人。
+			最终——
+			要不然成为只能在桥上伫立，无法融入社会的无面男。
+			要不然成为汤屋里的那个怪物，物质享受应有尽有，却忘了自己的初心在哪。
+			剩下的路你要自己走，不要回头。
+			千寻遵守了忠告，穿过了黑暗的隧道，回到了光明温暖的现实世界。
+			而我们，就算得到了这样的忠告，如果没有变成猪的父母，又真的舍得放弃这个流光溢彩的汤屋世界吗？知易行难，即是如此。
+		</div>
+		<div id="li">
+			<br>
+			<div style="display: inline-block;
+				float: left;">
+				<img src="电影/3.png" >
+			</div> 
+			在电影结束时，玛蒂娜回到了学校，并将那盆绿植种到了大地上，说：“我想我们在这里会好好的，里昂。”
+			其实那盆绿植就是里昂，他漂泊无依，从此可以真正落地了；而玛蒂娜也带着爱与善良，找到属于正常孩子的生活，扭曲的人性彻底回归。
+		</div>
+		<br>
+		<div id="ha">
+			<div style="display: inline-block;
+				float: right;">
+				<img src="电影/4.png" >
+			</div> 
+			在最后的战争中，哈尔说：“我已经逃避的太久了，现在终于等到了一个愿意让我誓死守护的人，就是你。”如果说哈尔的爱拯救了苏菲苍老的心，那苏菲的爱，拯救了哈尔怯懦的灵魂，他终于拥有了一颗强大的内心。
+		</div>
+		<br>
+		<div id="xiao">
+			<div style="display: inline-block;
+				float: left;">
+				<img src="电影/1.png" >
+			</div> 
+			安迪在逃狱后给瑞德的信中所说的：“Remember， Hope is a good thing， maybe the best of things and no good thing ever dies。” 或许这正是作品和导演想告诉我们的。“Fear can hold you prisoner， Hope can set you free。”这句话已成名言。
+		</div>
+		<div style="text-align: right;
+		margin-top: 140px;
+		margin-right: 40px;
+		color: #5F9EA0;
+		font-style: oblique;">
+			在影片中感受不一样的人生，或喜或悲，或平凡或伟大，或阴郁黑暗，或云开见日，当真是百味人间。
+			<br/>
+			<br/>
+			----致敬那些可称为艺术的作品&nbsp &nbsp
+			
+		</div>
+	<div id="bottom">
+		Meet you like the wind.
+		<br>
+		遇见你，温澜如风
+	</div>
+	</body>
+</html>

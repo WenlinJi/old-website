@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>日贴记</title>
+		<link rel="stylesheet" type="text/css" href="css/格式.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style时间轴.css"/>
+		<style type="text/css">
+			#bottom{
+				margin-top: 220px;
+			}
+			#box{
+		        margin-bottom: 70px;
+				}
+	
+			*, *:before, *:after {
+			  box-sizing: border-box;
+			}
+			
+			body {
+			  
+			  background-attachment: fixed;
+			  background-image: url(总/背景3.jpg);
+			  color: slategrey;
+			}
+			p{
+				font-family: "华文行楷";
+				font-size: 30px;
+				line-height: 1.5;
+				font-weight: 300;
+				color: cadetblue;
+			}
+			
+			.content {
+			  display: flex;
+			  margin: 0 auto;
+			  justify-content: center;
+			  align-items: center;
+			  flex-wrap: wrap;
+			  max-width: 1000px;
+			}
+			
+			.card {
+			  color: inherit;
+			  cursor: pointer;
+			  width: calc(33% - 2rem);
+			  min-width: calc(33% - 2rem);
+			  height: 400px;
+			  min-height: 400px;
+			  perspective: 1000px;
+			  margin: 1rem;
+			  position: relative;
+			}
+			@media screen and (max-width: 800px) {
+			  .card {
+			    width: calc(50% - 2rem);
+			  }
+			}
+			@media screen and (max-width: 500px) {
+			  .card {
+			    width: 100%;
+			  }
+			}
+			
+			.front,.back {
+			  display: flex;
+			  border-radius: 6px;
+			  background-position: center;
+			  background-size: cover;
+			  text-align: center;
+			  justify-content: center;
+			  align-items: center;
+			  position: absolute;
+			  height: 100%;
+			  width: 100%;
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			  transform-style: preserve-3d;
+			  transition: ease-in-out 600ms;
+			}
+			
+			.front {
+			  background-size: cover;
+			  padding: 2rem;
+			  font-size: 1.618rem;
+			  font-weight: 600;
+			  color: #fff;
+			  overflow: hidden;
+			  font-family: Poppins, sans-serif;
+			}
+
+			.card:hover .front {
+			  transform: rotateY(180deg);
+			}
+			.card:nth-child(even):hover .front {
+			  transform: rotateY(-180deg);
+			}
+			
+			.back {
+			  background: #fff;
+			  transform: rotateY(-180deg);
+			  padding: 0 2em;
+			}
+			.card:hover .back {
+			  transform: rotateY(0deg);
+			}
+			.card:nth-child(even) .back {
+			  transform: rotateY(180deg);
+			}
+			.card:nth-child(even):hover .back {
+			  transform: rotateY(0deg);
+			}
+			
+			.button {
+			  transform: translateZ(40px);
+			  cursor: pointer;
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			  font-weight: bold;
+			  color: #fff;
+			  padding: .5em 1em;
+			  border-radius: 100px;
+			  font: inherit;
+			  background: linear-gradient(135deg, #1fc9ef, #54e0ff);
+			  border: none;
+			  position: relative;
+			  transform-style: preserve-3d;
+			  transition: 300ms ease;
+			}
+			.button:before {
+			  transition: 300ms ease;
+			  position: absolute;
+			  display: block;
+			  content: '';
+			  transform: translateZ(-40px);
+			  -webkit-backface-visibility: hidden;
+			  backface-visibility: hidden;
+			  height: calc(100% - 20px);
+			  width: calc(100% - 20px);
+			  border-radius: 100px;
+			  left: 10px;
+			  top: 16px;
+			  box-shadow: 0 0 10px 10px rgba(26, 87, 230, 0.25);
+			  background-color: rgba(26, 87, 230, 0.25);
+			}
+			.button:hover {
+			  transform: translateZ(55px);
+			}
+			.button:hover:before {
+			  transform: translateZ(-55px);
+			}
+			.button:active {
+			  transform: translateZ(20px);
+			}
+			.button:active:before {
+			  transform: translateZ(-20px);
+			  top: 12px;
+			}
+	
+
+		</style>
+	</head>
+	<body>
+		<div id="top">
+				<a href="关于我.html" ><img src="总/叶子2.png" >&nbsp玊尔&nbsp <img src="总/叶子3.png" ></a>
+			</div>
+			<div id="box">
+				<table border="0" cellspacing="" cellpadding="">
+					<tr>
+						<th><a href="插画.html">插画本</a></th>
+						<th><a href="电影.html">电影录</a></th>
+						<th><a href="index.html"><img src="日贴/鸟.png" ></a></th>
+						<th><a href="行星.html">行星游</a></th>
+						<th><a href="美食.html">美食站</a></th>
+					</tr>
+				</table>
+	
+		</div>
+		<div class="timeline">
+		  <div class="year">
+		    <div class="inner">
+		      <span style="
+			  width: 100%;
+			  color: black;
+			  rgba(250,250,250,0.8);"><img src="日贴/秋叶.png" >   2 0 1 9 </span>
+			  <br>
+		    </div>
+		  </div>
+		  
+		  <ul class="days">
+			  
+			  <li class="day">
+			    <div class="events">
+			      <p></p>
+			      <div class="date"></div>
+			    </div>
+			  </li>
+			  
+		    <li class="day">
+		      <div class="events">
+		        <p style="color: darkslategray;
+				font-size: 21px;">时至傍晚，走在走廊里，迎着面就看见彩色的一片光,</p>
+				<p style="color: darkslategray;
+				font-size: 21px;">有时候，校园的晚霞真的出乎意料的好看。</p>
+		        <div class="date">9月13日（周五）</div>
+		      </div>
+		    </li>
+		    
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/晚霞.jpg" alt="" />
+			      <p class="caption">
+			       Sunset glow
+			      </p>
+			    </div>
+			    <div class="date">13 September (Friday)</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+		    <li class="day">
+		      <div class="events">
+		        <p style="color: darkslategray;
+				font-size: 21px;">午后，全宿舍第一次整整齐齐的在校园慢悠悠地游逛。</p>		        
+				<div class="date">9月30日（周一）</div>
+		      </div>
+		    </li>
+		
+		    <li class="day">
+		      <div class="events">
+		        <div class="day__img">
+		          <img src="日贴/四人.jpeg" alt="" />
+		          <p class="caption">
+		           Alameda
+		          </p>
+		        </div>
+		        <div class="date">30 September (Monday)</div>
+		      </div>
+		    </li>
+		    
+		    <li class="day">
+		      <div class="events">
+		        <p></p>
+		        <div class="date"></div>
+		      </div>
+		    </li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">总感觉淮安的雪来的有点晚，银兴黄的很透很明艳,和高中校园的如出一辙。</p>
+			    <div class="date">11月22日（周五.小雪）</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/银兴.jpeg" alt="" />
+			      <p class="caption">
+			        SILVERstor
+			      </p>
+			    </div>
+			    <div class="date">22 November (Friday)</div>
+			  </div>
+			</li>
+		    
+		    <li class="day">
+		      <div class="events">
+		        <p></p>
+		        <div class="date"></div>
+		      </div>
+		    </li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">突然一抬头，发现树上叶子都没了，光秃秃的，一瞬间很诧异，总感觉前几天树上的叶子还是满满当当的。</p>
+				<p style="color: darkslategray;
+				font-size: 21px;">还有一个月亮，很小很亮。</p>
+			    <div class="date">12月4日（周三）</div>
+			  </div>
+			</li>
+		    
+		    <li class="day">
+		      <div class="events">
+		        <div class="day__img">
+		          <img src="日贴/树月.jpg" alt="" />
+		          <p class="caption">
+		           Trees and Moon
+		          </p>
+		        </div>
+		        <div class="date">4 December (Wednesday)</div>
+		      </div>
+		    </li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">难得熬了一个晚上，悄悄拉开窗帘，第一次看见了所谓的太阳初升。天很冷，倒也值得纪念。</p>
+			    <div class="date">1月20日（周一.大寒）</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/日升.jpeg" alt="" />
+			      <p class="caption">
+			       Sunrise
+			      </p>
+			    </div>
+			    <div class="date">20 January (Monday)</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">几个月来，一直待在家里，难得有个机会出门走走，特意去高中校园走了一遭，还是老样子，青枫倒是长了很多。</p>
+			    <div class="date">4月9日（周四）</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/学校.jpg" alt="" />
+			      <p class="caption">
+			        Alma Mater
+			      </p>
+			    </div>
+			    <div class="date">9 April (Thursday)</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">随意走进一家花店，不是鲜花，却依旧鲜艳，经店主处理之后，花的保质期倒是更长久了。</p>
+			    <div class="date">5月20日（周一）</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/花.jpg" alt="" />
+			      <p class="caption">
+			        PreservedFreshFlower
+			      </p>
+			    </div>
+			    <div class="date">20 May (Monday)</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: darkslategray;
+				font-size: 21px;">三月杂货铺一游，不过没开张，只能透过玻璃大致的看看，里头当真都是些零零碎碎的小物件。“贩卖美好”也是很浪漫的一件事了。</p>
+			    <div class="date">5月25日（周一）</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <div class="day__img">
+			      <img src="日贴/店.jpg" alt="" />
+			      <p class="caption">
+			       Grocery store
+			      </p>
+			    </div>
+			    <div class="date">25 May (Monday)</div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p style="color: #008000;
+				font-size: 24px;">（未完待续）</p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+			<li class="day">
+			  <div class="events">
+			    <p></p>
+			    <div class="date"></div>
+			  </div>
+			</li>
+			
+		  </ul>
+		  <div class="year year--end">
+		    <div class="inner">
+				<br>
+		      <span style="color: black;">2 0 2 0...</span>
+		    </div>
+		  </div>
+		</div>	
+		
+		<div style="height: 110px;
+		font-size: 30px;
+		background-color: rgba(216,191,216,0.2);
+		margin-top: 80px;
+		margin-bottom: 70px;
+		text-align: center;
+		line-height: 110px;
+		color: thistle;"
+		>
+<img src="总/紫.png" >日贴&电影
+		</div>
+		
+		 <div class="content">
+		   <a href="电影.html" class="card" >
+		     <div class="front" style="background-image: url(日贴/林.jpg);">
+		       <p style="color: white;
+			   font-family: 幼圆;
+			   font-weight: bold;
+			   font-style: oblique;">A sunny day</p>
+		     </div>
+		     <div class="back">
+		       <div>
+		         <p >Sun.</p>
+		 		<br>
+		         <p style="font-size: 20px;">夕阳总会落在你身上，你也会快乐一场。</p>
+		 		<br>
+		         <button class="button">Click Here</button>
+		       </div>
+		     </div>
+		 	</a>
+		 	<a href="电影.html" class="card" >
+		     <div class="front" style="background-image: url(日贴/海.png);">
+		      <p style="color: white;
+			  font-family: 幼圆;
+			  font-weight: bold;
+			  font-style: oblique;">A windy day</p>
+		     </div>
+		     <div class="back">
+		       <div>
+		         <p >Wind?</p>
+		 		<br>
+		         <p style="font-size: 20px;">风再大，也不可能吹走太阳。</p>
+		 		<br>
+		         <button class="button">Click Here</button>
+		       </div>
+		     </div>
+		 	</a>
+		 	<a href="电影.html" class="card" >
+		     <div class="front" style="background-image: url(日贴/雨.jpeg);">
+		       <p style="color: white;
+			   font-family: 幼圆;
+			   font-weight: bold;
+			   font-style: oblique;">A rainy day</p>
+		     </div>
+		     <div class="back">
+		       <div>
+		         <p >Rain? </p>
+		 		<br>
+		         <p style="font-size: 20px;">就在一次次日升月落里，再爱一次人间。</p>
+		 		<br>
+		         <button class="button">Click Here</button>
+		       </div>
+		 	  </div>
+		     </a>
+		 	</div>
+			
+			<div style="height: 40px;
+			margin-top: 36px;
+			margin-right: 85px;
+			line-height: 40px;
+			text-align: right;
+			font-size: 22px;">
+				“生活就像放在盒子里的巧克力糖，你永远不知道下一颗是什么味道的。”
+				<p style="font-size: 22px;
+				color:  slategrey;">---但你总要一探究竟 &nbsp </p>
+			</div>
+	
+		<div id="bottom">
+			Meet you like the wind.
+			<br>
+			遇见你，温澜如风
+		</div>
+		
+	</body>
+</html>
+
+
+    
